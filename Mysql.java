@@ -9,7 +9,7 @@ public class Mysql {
             conn =  DriverManager.getConnection(url , user , password);
         }
         catch (SQLException  ex) {
-            throw  ex;
+            ex.printStackTrace();
         }
         finally {
             return conn;

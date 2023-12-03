@@ -1,7 +1,6 @@
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 
-public  class Sort {
+public  class Support {
 
 
 
@@ -61,7 +60,44 @@ public  class Sort {
         return listBook;
     }
 
-    public  static  void main(String[] args) {
+
+    public static String italicText (String text) {
+
+        String italic = "\033[3m";
+
+        String reset = "\033[0m";
+
+        return italic + text + reset;
+
+    }
+
+    public  static String  boldText (String text) {
+
+        String bold = "\033[1m";
+
+        String reset = "\033[0m";
+
+
+        return bold + text + reset;
+    }
+
+
+    public  static String redColor (String text) {
+        String reset = "\u001B[0m";
+        String red = "\u001B[38;2;216;0;50m";
+        return red + text + reset;
+    }
+
+    public static String capitalizeText (String text) {
+        return text.substring(0, 1).toUpperCase() + text.substring(1);
+    }
+
+    public static String greenColor (String text) {
+        String reset = "\u001B[0m";
+        String red = "\u001B[38;2;103;194;97m";
+        return red + text + reset;
+    }
+     public  static  void main(String[] args) {
 
 
 
